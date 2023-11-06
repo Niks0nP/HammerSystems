@@ -6,13 +6,19 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:paddingEnd="16dp"
     tools:ignore="RtlSymmetry">
-    
-    <ImageView
-        android:id="@+id/promotion_image"
-        android:layout_width="300dp"
-        android:layout_height="112dp"
-        android:background="@drawable/recycler_style"
-        android:scaleType="center"
-        android:importantForAccessibility="no" />
 
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="10dp">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/promotion_image"
+            android:layout_width="300dp"
+            android:layout_height="112dp"
+            android:background="@drawable/recycler_style"
+            android:scaleType="center"
+            android:importantForAccessibility="no" />
+
+    </androidx.cardview.widget.CardView>
 </FrameLayout>

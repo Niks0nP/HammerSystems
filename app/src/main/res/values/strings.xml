@@ -3,4 +3,11 @@
     <string name="menu">Меню</string>
     <string name="person">Профиль</string>
     <string name="garbage">Корзина</string>
+    
+    <string-array name="cities_array">
+        <item>Москва</item>
+        <item>Санкт-Петербург</item>
+        <item>Волгоград</item>
+        <item>Тула</item>
+    </string-array>
 </resources>
