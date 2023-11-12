@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.hammersystems.R
 import com.example.hammersystems.databinding.MainFragmentBinding
 import com.example.hammersystems.ui.view.adapter.CategoryRecyclerAdapter
+import com.example.hammersystems.ui.view.adapter.MenuRecyclerAdapter
 import com.example.hammersystems.ui.view.adapter.PromoutionRecyclerAdapter
 
 class MainFragment : Fragment(R.layout.main_fragment) {
@@ -18,6 +19,7 @@ class MainFragment : Fragment(R.layout.main_fragment) {
 
     private lateinit var categoryRecyclerAdapter: CategoryRecyclerAdapter
     private lateinit var promoutionRecyclerAdapter: PromoutionRecyclerAdapter
+    private lateinit var menuRecyclerAdapter: MenuRecyclerAdapter
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -28,6 +30,7 @@ class MainFragment : Fragment(R.layout.main_fragment) {
         val view = binding.root
         categoryRecyclerAdapter = CategoryRecyclerAdapter()
         promoutionRecyclerAdapter = PromoutionRecyclerAdapter()
+        menuRecyclerAdapter = MenuRecyclerAdapter()
         return view
     }
 
@@ -41,6 +44,9 @@ class MainFragment : Fragment(R.layout.main_fragment) {
         binding.promotionsRecycler.layoutManager = LinearLayoutManager(requireContext(),
             LinearLayoutManager.HORIZONTAL, false)
         binding.promotionsRecycler.adapter = promoutionRecyclerAdapter
+
+        binding.menuRecycler.layoutManager = LinearLayoutManager(requireContext())
+        binding.menuRecycler.adapter = menuRecyclerAdapter
     }
 
     override fun onDestroyView() {
